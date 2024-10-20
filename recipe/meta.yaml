@@ -10,11 +10,12 @@ source:
   sha256: cdcc8edceb2c8b1f388d0ca3d8f916563ec7301bb44db556706b3ed0054b9ae0
   patches:
     - root_path.patch
+    - pyproject.patch
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
