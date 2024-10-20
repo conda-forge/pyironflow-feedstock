@@ -23,6 +23,7 @@ requirements:
     - pip
     - anywidget
     - esbuild
+    - ipytree
     - ipython
     - ipywidgets
     - nodejs
@@ -32,6 +33,7 @@ requirements:
     - python >=3.9,<3.13
     - anywidget
     - traitlets
+    - ipytree
     - ipython
     - ipywidgets
     - pyiron_workflow
