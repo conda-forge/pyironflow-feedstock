@@ -8,11 +8,13 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyironflow-{{ version }}.tar.gz
   sha256: 46133a7fdfeeb70121dc6ece49d52b09ddce12ab84b15bd4e4f214d7ad14c653
+  patches:
+    - color.patch
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
