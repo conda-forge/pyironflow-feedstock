@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyironflow-{{ version }}.tar.gz
   sha256: c72c3983d830c8c1b13172832ec9106d08f0efe17f9e6ba9258187ebcaf23098
-  patches:
-    - color.patch
 
 build:
   noarch: python
