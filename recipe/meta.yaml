@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python 3.11
     - hatchling
     - hatch-jupyter-builder
     - versioneer
@@ -30,7 +30,7 @@ requirements:
     - traitlets
     - pyiron_workflow
   run:
-    - python >={{ python_min }},<3.13
+    - python >=3.11,<3.13
     - anywidget
     - traitlets
     - ipytree
