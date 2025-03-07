@@ -1,5 +1,5 @@
 {% set name = "pyironflow" %}
-{% set version = "0.0.9" %}
+{% set version = "0.0.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyironflow-{{ version }}.tar.gz
-  sha256: ba687012564bbcbb642bf79f1d20a657115755dd1fc548ff54902e00608fcb67
+  sha256: 2a880f1747c8c311ae65df4cfdb67a4ed8dd7ee9201b1b0f2c8c4e6e8e8c08a9
 
 build:
   noarch: python
@@ -34,9 +34,9 @@ requirements:
     - anywidget
     - traitlets
     - ipytree
-    - ipython
+    - ipython >=8.11,<9
     - ipywidgets
-    - pyiron_workflow
+    - pyiron_workflow >=0.12.1,<1
 
 test:
   imports:
