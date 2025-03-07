@@ -1,5 +1,6 @@
 {% set name = "pyironflow" %}
 {% set version = "0.0.13" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +17,7 @@ build:
 
 requirements:
   host:
-    - python 3.11
+    - python {{ python_min }}
     - hatchling
     - hatch-jupyter-builder
     - versioneer
@@ -30,7 +31,7 @@ requirements:
     - traitlets
     - pyiron_workflow
   run:
-    - python >=3.11,<3.13
+    - python >={{ python_min }},<3.13
     - anywidget
     - traitlets
     - ipytree
