@@ -1,5 +1,5 @@
 {% set name = "pyironflow" %}
-{% set version = "0.0.16" %}
+{% set version = "0.0.17" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyironflow-{{ version }}.tar.gz
-  sha256: ba42d0ce0d661c5cabe99cf27629ebb4cbd391e67621e126c1067e1ae0704f2a
+  sha256: 1e3ab153a64e2c2f5626495dba62d5d921e6dfcade155529532cb3cc5c26c46a
 
 build:
   noarch: python
