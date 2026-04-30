@@ -1,23 +1,26 @@
-{% set name = "pyironflow" %}
-{% set version = "0.0.21" %}
-{% set python_min = "3.11" %}
+schema_version: 1
+
+context:
+  name: pyironflow
+  version: "0.0.21"
+  python_min: "3.11"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyironflow-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyironflow-${{ version }}.tar.gz
   sha256: 5c177fdd2b9b397dd39ab6886c56b91fcb7d3831b8d73ac418acab12b61ca813
 
 build:
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python 3.11.*
     - hatchling
     - hatch-jupyter-builder
     - versioneer
@@ -31,7 +34,7 @@ requirements:
     - traitlets
     - pyiron_workflow
   run:
-    - python >={{ python_min }},<3.13
+    - python >=${{ python_min }},<3.13
     - anywidget
     - traitlets
     - ipytree
@@ -39,20 +42,18 @@ requirements:
     - ipywidgets
     - pyiron_workflow >=0.12.1,<1
 
-test:
-  imports:
-    - pyironflow
-  commands:
-    - pip check
-  requires:
-    - pip
-    - python {{ python_min }}
+tests:
+  - python:
+      imports:
+        - pyironflow
+      pip_check: true
+      python_version: ${{ python_min }}
 
 about:
-  home: https://github.com/pyiron/pyironFlow
   summary: react xyflow for pyiron
   license: BSD-3-Clause
   license_file: LICENSE
+  homepage: https://github.com/pyiron/pyironFlow
 
 extra:
   recipe-maintainers:
