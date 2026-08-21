@@ -22,6 +22,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - hatchling
+    - hatch-vcs
     - hatch-jupyter-builder
     - versioneer
     - pip
