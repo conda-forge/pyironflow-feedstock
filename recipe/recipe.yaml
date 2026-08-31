@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyironflow
-  version: 0.0.23
+  version: 0.0.24
   python_min: '3.11'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyironflow-${{ version }}.tar.gz
-  sha256: 728550b1908f0a8c872cf671222955a697226865b4b5760fd08fdc8779cb1bfc
+  sha256: 5b961d0b80e7907d5f139d3a541c89b596870e121c51db5fd2af5433e6a853de
 
 build:
   number: 0
@@ -41,7 +41,7 @@ requirements:
     - ipytree ==0.2.2
     - ipython >=8.37.0,<8.38.0
     - ipywidgets >=8.1.8,<8.2.0
-    - pyiron_workflow ==0.16.0
+    - pyiron_workflow ==0.17.0
 tests:
   - python:
       imports:
