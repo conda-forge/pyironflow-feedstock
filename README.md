@@ -189,6 +189,7 @@ Feedstock Maintainers
 =====================
 
 * [@jan-janssen](https://github.com/jan-janssen/)
+* [@liamhuber](https://github.com/liamhuber/)
 * [@pmrv](https://github.com/pmrv/)
 * [@srmnitc](https://github.com/srmnitc/)
 
