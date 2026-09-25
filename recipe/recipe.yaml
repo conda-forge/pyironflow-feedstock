@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyironflow
-  version: 0.1.2
+  version: 0.1.3
   python_min: '3.11'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyironflow-${{ version }}.tar.gz
-  sha256: eb3f5835697f760e980433235a103163e7d9d08789918dd55c161439be6b3a73
+  sha256: 9cf56518f7cc794898af782d99601ddad5454320a039ee1afb17e2b2befbe1d6
 
 build:
   number: 0
@@ -23,25 +23,22 @@ requirements:
     - python ${{ python_min }}.*
     - hatchling
     - hatch-vcs
-    - hatch-jupyter-builder
     - versioneer
     - pip
     - anywidget
-    - esbuild
     - ipytree
     - ipython
     - ipywidgets
-    - nodejs
     - traitlets
     - pyiron_workflow
   run:
-    - python >=${{ python_min }},<3.13
+    - python >=${{ python_min }},<3.15
     - anywidget ==0.9.18
-    - bagofholding ==0.1.12
+    - bagofholding >=0.1.12,<0.2.0
     - ipytree ==0.2.2
     - ipython >=9.16.1,<9.17.0
     - ipywidgets >=8.1.8,<8.2.0
-    - pyiron_workflow ==0.20.0
+    - pyiron_workflow >=0.20.0,<0.21.0
     - traitlets >=5.14.3,<5.15.0
 tests:
   - python:
