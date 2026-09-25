@@ -23,15 +23,12 @@ requirements:
     - python ${{ python_min }}.*
     - hatchling
     - hatch-vcs
-    - hatch-jupyter-builder
     - versioneer
     - pip
     - anywidget
-    - esbuild
     - ipytree
     - ipython
     - ipywidgets
-    - nodejs
     - traitlets
     - pyiron_workflow
   run:
