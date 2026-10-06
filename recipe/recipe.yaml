@@ -43,7 +43,7 @@ tests:
       python_version: ${{ python_min }}
 
 about:
-  summary: react xyflow for pyiron
+  summary: An ipywidgets GUI for pyiron workflow
   license: BSD-3-Clause
   license_file: LICENSE
   homepage: https://github.com/pyiron/pyironFlow
