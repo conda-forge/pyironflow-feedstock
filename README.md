@@ -7,7 +7,7 @@ Home: https://github.com/pyiron/pyironFlow
 
 Package license: BSD-3-Clause
 
-Summary: react xyflow for pyiron
+Summary: An ipywidgets GUI for pyiron workflow
 
 Current build status
 ====================
